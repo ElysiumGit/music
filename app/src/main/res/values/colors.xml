@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--grey 300-->
+    <color name="ic_launcher_background">#E0E0E0</color>
+
+    <color name="twenty_percent_black_overlay">#34000000</color>
+    <color name="fifty_percent_black_overlay">#88000000</color>
+
+    <color name="app_shortcut_default_foreground">@color/md_blue_grey_500</color>
+    <color name="app_shortcut_default_background">@color/md_grey_50</color>
+
+    <!--starry background stuff-->
+    <color name="lightblue">#85c6ff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="playlistBg">#50000000</color>
+
+    <color name="gold">#ff9c00</color>
+    <color name="yellow">#ffdf00</color>
+
+    <array name="funny_colors">
+        <item>@color/gold</item>
+        <item>@color/black</item>
+    </array>
+
+    <integer-array name="star_colors_small">
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+    </integer-array>
+
+    <integer-array name="meteorites_colors">
+
+        <item>@color/lightblue</item>
+        <item>@color/lightblue</item>
+        <item>@color/lightblue</item>
+    </integer-array>
+
+</resources>

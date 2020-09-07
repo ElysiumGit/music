@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="roundSelector" format="reference" />
+    <attr name="rectSelector" format="reference" />
+    <attr name="rectSelectorStrong" format="reference" />
+
+    <attr name="defaultFooterColor" format="color" />
+
+    <attr name="toolbarPopupTheme" format="reference" />
+
+    <attr name="iconColor" format="color" />
+    <attr name="dividerColor" format="color" />
+
+    <attr name="textColor" format="color" />
+
+    <attr name="playlistCardBackground" format="color" />
+
+    <attr name="starsVisibilityMode" format="integer">
+        <enum name="visible" value="0" />
+        <enum name="gone" value="2" />
+    </attr>
+
+    <attr name="blurVisibilityMode" format="integer">
+        <enum name="visible" value="0" />
+        <enum name="gone" value="2" />
+    </attr>
+
+</resources>
