@@ -101,7 +101,7 @@
         android:textSize="28dp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:text="Premium Themes"
+        android:text="Pro Features"
         android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@id/logo"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,18 +115,32 @@
         app:layout_constraintTop_toBottomOf="@id/title1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="No Ads Forever"
+        android:text="Custom Themes"
         android:textColor="@color/white"
         android:layout_marginTop="12dp"
         android:textSize="28dp"
         android:textStyle="bold"
         />
 
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/title2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="No Ads Forever"
+            android:textColor="@color/white"
+            android:layout_marginTop="12dp"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/purchase_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/title2"
+        app:layout_constraintTop_toBottomOf="@id/title3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="15dp"

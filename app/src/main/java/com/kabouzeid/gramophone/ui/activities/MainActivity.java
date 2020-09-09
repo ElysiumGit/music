@@ -48,6 +48,9 @@ import com.kabouzeid.gramophone.ui.activities.base.AbsSlidingMusicPanelActivity;
 import com.kabouzeid.gramophone.ui.activities.intro.AppIntroActivity;
 import com.kabouzeid.gramophone.ui.fragments.mainactivity.folders.FoldersFragment;
 import com.kabouzeid.gramophone.ui.fragments.mainactivity.library.LibraryFragment;
+import com.kabouzeid.gramophone.ui.rating.FiveStarsDialog;
+import com.kabouzeid.gramophone.ui.rating.NegativeReviewListener;
+import com.kabouzeid.gramophone.ui.rating.ReviewListener;
 import com.kabouzeid.gramophone.util.MusicUtil;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
 
@@ -62,7 +65,7 @@ import java.util.Random;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AbsSlidingMusicPanelActivity {
+public class MainActivity extends AbsSlidingMusicPanelActivity implements NegativeReviewListener, ReviewListener {
 
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final int APP_INTRO_REQUEST = 100;
@@ -136,10 +139,30 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
         launchCount = mPreferences.getInt("launchTimes",1);
         launchCount++;
         mPreferences.edit().putInt("launchTimes",launchCount).commit();
-        if(!App.isProVersion() && launchCount%10==0){
+        if(!App.isProVersion() && launchCount%5==0){
             startActivity(new Intent(this, PurchaseActivity.class));
         }
 
+        FiveStarsDialog fiveStarsDialog = new FiveStarsDialog(this,"test@gmail.com");
+        fiveStarsDialog.setRateText("If you like our app we'd love to know about it! Thank you for your time.")
+                .setTitle("Our service is free with no ads, but we only ask for your rating :)")
+                .setForceMode(false)
+                .setUpperBound(4)
+                .setNegativeReviewListener(this)
+                .setReviewListener(this)
+                .setSupportEmail("test@gmail.com")
+                .showAfter(3);
+
+    }
+
+    @Override
+    public void onNegativeReview(int stars) {
+        Log.d(TAG, "Negative review " + stars);
+    }
+
+    @Override
+    public void onReview(int stars) {
+        Log.d(TAG, "Review " + stars);
     }
 
     @Override

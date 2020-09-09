@@ -14,7 +14,9 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.kabouzeid.gramophone.App;
 import com.kabouzeid.gramophone.R;
 import com.kabouzeid.gramophone.dialogs.ScanMediaFolderChooserDialog;
 import com.kabouzeid.gramophone.ui.activities.MainActivity;
@@ -22,6 +24,8 @@ import com.kabouzeid.gramophone.ui.activities.PurchaseActivity;
 import com.kabouzeid.gramophone.ui.activities.SettingsActivity;
 import com.kabouzeid.gramophone.ui.fragments.mainactivity.folders.FoldersFragment;
 import com.sofakingforever.stars.AnimatedStarsView;
+
+import static androidx.annotation.RestrictTo.Scope.LIBRARY;
 
 public class MoreFragment extends Fragment {
     private ConstraintLayout foldersButton,settingsButton,scanButton,twitterButton,instagramButton,shareButton,customButton;
@@ -72,7 +76,14 @@ public class MoreFragment extends Fragment {
             dialog.show(getActivity().getSupportFragmentManager(), "SCAN_MEDIA_FOLDER_CHOOSER");
         }, 200));
 
-        foldersButton.setOnClickListener(view12 -> setCurrentFragment(FoldersFragment.newInstance(getActivity())));
+        foldersButton.setOnClickListener(v -> {
+            if (!App.isProVersion()) {
+                Toast.makeText(getActivity(), R.string.folder_view_is_a_pro_feature, Toast.LENGTH_LONG).show();
+                startActivity(new Intent(getActivity(), PurchaseActivity.class));
+            }else{
+                setCurrentFragment(FoldersFragment.newInstance(getActivity()));
+            }
+        });
 
         customButton.setOnClickListener(view14 -> startActivity(new Intent(getActivity(), PurchaseActivity.class)));
 

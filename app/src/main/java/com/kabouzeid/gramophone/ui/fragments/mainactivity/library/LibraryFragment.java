@@ -44,6 +44,7 @@ import com.kabouzeid.gramophone.ui.fragments.mainactivity.library.pager.AlbumsFr
 import com.kabouzeid.gramophone.ui.fragments.mainactivity.library.pager.ArtistsFragment;
 import com.kabouzeid.gramophone.ui.fragments.mainactivity.library.pager.PlaylistsFragment;
 import com.kabouzeid.gramophone.ui.fragments.mainactivity.library.pager.SongsFragment;
+import com.kabouzeid.gramophone.util.NavigationUtil;
 import com.kabouzeid.gramophone.util.PhonographColorUtil;
 import com.kabouzeid.gramophone.util.PreferenceUtil;
 import com.kabouzeid.gramophone.util.Util;
@@ -331,6 +332,8 @@ public class LibraryFragment extends AbsMainActivityFragment implements CabHolde
                 return true;
             case R.id.action_pro:
                 startActivity(new Intent(getActivity(), PurchaseActivity.class));
+            case R.id.action_equalizer:
+                NavigationUtil.openEqualizer(getActivity());
         }
         return super.onOptionsItemSelected(item);
     }

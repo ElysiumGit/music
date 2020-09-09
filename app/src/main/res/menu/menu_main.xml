@@ -3,10 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".DrawerActivity">
 
-
     <item
         android:id="@+id/action_pro"
         android:icon="@drawable/ic_new"
+        android:title="@string/action_pro"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_equalizer"
+        android:icon="@drawable/ic_eq"
         android:title="@string/action_pro"
         app:showAsAction="ifRoom" />
 

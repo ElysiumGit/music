@@ -47,8 +47,8 @@ android {
         vectorDrawables.useSupportLibrary = true
 
         applicationId 'cyberwolf.musicplayer'
-        versionCode 65
-        versionName '2.0.0'
+        versionCode 67
+        versionName '2.0.1'
     }
     signingConfigs {
         release {
