@@ -12,7 +12,7 @@
     <item
         android:id="@+id/action_equalizer"
         android:icon="@drawable/ic_eq"
-        android:title="@string/action_pro"
+        android:title="@string/action_equalizer"
         app:showAsAction="ifRoom" />
 
     <item

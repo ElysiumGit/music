@@ -5,7 +5,7 @@
     android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kabouzeid.gramophone.ui.fragments.mainactivity.folders.FoldersFragment">
+    tools:context="com.kabouzeid.trebl.com.trebl.gramophone.ui.fragments.mainactivity.folders.FoldersFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -71,7 +71,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.kabouzeid.gramophone.views.BreadCrumbLayout
+        <com.kabouzeid.trebl.views.BreadCrumbLayout
             android:id="@+id/bread_crumbs"
             android:layout_width="match_parent"
             android:layout_height="@dimen/tab_height"

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.kabouzeid.gramophone">
+    package="com.kabouzeid.trebl">
 
     <application
-        android:name=".App"
+        android:name="com.kabouzeid.trebl.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Phonograph.Light"
         android:largeHeap="true"
         tools:ignore="UnusedAttribute">
-        <activity android:name=".ui.activities.MainActivity">
+        <activity android:name="com.kabouzeid.trebl.ui.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.MUSIC_PLAYER" />
@@ -85,35 +85,35 @@
                 <data android:mimeType="vnd.android.cursor.dir/audio" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.AlbumDetailActivity" />
-        <activity android:name=".ui.activities.ArtistDetailActivity" />
-        <activity android:name=".ui.activities.GenreDetailActivity" />
-        <activity android:name=".ui.activities.PlaylistDetailActivity" />
+        <activity android:name="com.kabouzeid.trebl.ui.activities.AlbumDetailActivity" />
+        <activity android:name="com.kabouzeid.trebl.ui.activities.ArtistDetailActivity" />
+        <activity android:name="com.kabouzeid.trebl.ui.activities.GenreDetailActivity" />
+        <activity android:name="com.kabouzeid.trebl.ui.activities.PlaylistDetailActivity" />
         <activity
-            android:name=".ui.activities.tageditor.SongTagEditorActivity"
+            android:name="com.kabouzeid.trebl.ui.activities.tageditor.SongTagEditorActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.activities.tageditor.AlbumTagEditorActivity"
+            android:name="com.kabouzeid.trebl.ui.activities.tageditor.AlbumTagEditorActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".ui.activities.SearchActivity" />
+        <activity android:name="com.kabouzeid.trebl.ui.activities.SearchActivity" />
         <activity
-            android:name=".ui.activities.SettingsActivity"
+            android:name="com.kabouzeid.trebl.ui.activities.SettingsActivity"
             android:label="@string/action_settings" />
         <activity
-            android:name=".ui.activities.AboutActivity"
+            android:name="com.kabouzeid.trebl.ui.activities.AboutActivity"
             android:label="@string/action_about" />
         <activity
-            android:name=".ui.activities.intro.AppIntroActivity"
+            android:name="com.kabouzeid.trebl.ui.activities.intro.AppIntroActivity"
             android:label="@string/intro_label"
             android:theme="@style/Theme.Intro" />
         <activity
-            android:name=".ui.activities.bugreport.BugReportActivity"
+            android:name="com.kabouzeid.trebl.ui.activities.bugreport.BugReportActivity"
             android:label="@string/report_an_issue" />
         <activity
-            android:name=".appshortcuts.AppShortcutLauncherActivity"
+            android:name="com.kabouzeid.trebl.appshortcuts.AppShortcutLauncherActivity"
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity android:name=".ui.activities.PurchaseActivity" />
+        <activity android:name="com.kabouzeid.trebl.ui.activities.PurchaseActivity" />
 
         <meta-data
             android:name="android.max_aspect"
@@ -122,7 +122,7 @@
             android:name="com.lge.support.SPLIT_WINDOW"
             android:value="true" />
         <meta-data
-            android:name="com.kabouzeid.gramophone.glide.PhonographGlideModule"
+            android:name="com.kabouzeid.trebl.glide.PhonographGlideModule"
             android:value="GlideModule" />
         <meta-data
             android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
@@ -138,19 +138,19 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <receiver android:name=".service.MediaButtonIntentReceiver">
+        <receiver android:name="com.kabouzeid.trebl.service.MediaButtonIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
         </receiver> <!-- Widgets -->
-        <receiver android:name=".appwidgets.BootReceiver">
+        <receiver android:name="com.kabouzeid.trebl.appwidgets.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetBig"
+            android:name="com.kabouzeid.trebl.appwidgets.AppWidgetBig"
             android:exported="false"
             android:label="@string/app_widget_big_name">
             <intent-filter>
@@ -162,7 +162,7 @@
                 android:resource="@xml/app_widget_big_info" />
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetClassic"
+            android:name="com.kabouzeid.trebl.appwidgets.AppWidgetClassic"
             android:exported="false"
             android:label="@string/app_widget_classic_name">
             <intent-filter>
@@ -174,7 +174,7 @@
                 android:resource="@xml/app_widget_classic_info" />
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetSmall"
+            android:name="com.kabouzeid.trebl.appwidgets.AppWidgetSmall"
             android:exported="false"
             android:label="@string/app_widget_small_name">
             <intent-filter>
@@ -186,7 +186,7 @@
                 android:resource="@xml/app_widget_small_info" />
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetCard"
+            android:name="com.kabouzeid.trebl.appwidgets.AppWidgetCard"
             android:exported="false"
             android:label="@string/app_widget_card_name">
             <intent-filter>
@@ -199,7 +199,7 @@
         </receiver>
 
         <service
-            android:name=".service.MusicService"
+            android:name="com.kabouzeid.trebl.service.MusicService"
             android:enabled="true" />
     </application>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
