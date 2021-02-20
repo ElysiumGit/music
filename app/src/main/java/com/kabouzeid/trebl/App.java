@@ -35,7 +35,7 @@ public class App extends Application {
         if (!ThemeStore.isConfigured(this, 1)) {
             ThemeStore.editTheme(this)
                     .primaryColorRes(R.color.md_indigo_500)
-                    .accentColorRes(R.color.md_pink_A400)
+                    .accentColorRes(R.color.md_red_900)
                     .commit();
         }
 

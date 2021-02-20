@@ -6,6 +6,7 @@
         <com.kabouzeid.trebl.preferences.LibraryPreference
             app:iconSpaceReserved="false"
             android:key="library_categories"
+            app:isPreferenceVisible="false"
             android:summary="@string/pref_summary_library_categories"
             android:title="@string/library_categories" />
 

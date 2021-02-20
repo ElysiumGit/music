@@ -91,11 +91,8 @@ public class SettingsActivity extends AbsBaseActivity implements ColorChooserDia
                     }
                 }
                 ThemeStore.editTheme(this)
-                        //.primaryColor(Color.TRANSPARENT) //boin transparent color
                         .primaryColor(selectedColor)
                         .commit();
-
-               // mPreferences.edit().putInt("materialColor",selectedColor).apply();
 
                 break;
             case R.string.accent_color:

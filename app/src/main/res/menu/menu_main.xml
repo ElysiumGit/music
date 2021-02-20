@@ -7,19 +7,19 @@
         android:id="@+id/action_pro"
         android:icon="@drawable/ic_new"
         android:title="@string/action_pro"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/action_equalizer"
-        android:icon="@drawable/ic_eq"
-        android:title="@string/action_equalizer"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_search"
         android:icon="@drawable/ic_search_white_24dp"
         android:title="@string/action_search"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_equalizer"
+        android:icon="@drawable/ic_eq"
+        android:title="@string/action_equalizer"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_shuffle_all"

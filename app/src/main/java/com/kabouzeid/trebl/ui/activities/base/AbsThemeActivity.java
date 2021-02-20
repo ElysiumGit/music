@@ -65,7 +65,7 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
 
     public void setStatusbarColorAuto() {
         // we don't want to use statusbar color because we are doing the color darkening on our own to support KitKat
-        //boin status bar color is assigned here in accordance with the active theme. This is done independently as the status bar is treated as a separate layer
+        //noteworthy: status bar color is assigned here in accordance with the active theme. This is done independently as the status bar is treated as a separate layer
         setStatusbarColor(ThemeStore.primaryColor(this));
         mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         if(PreferenceUtil.getInstance(this).getGeneralTheme()==PreferenceUtil.getThemeResFromPrefValue("dark")){

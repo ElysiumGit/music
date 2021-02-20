@@ -281,10 +281,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity implements Negati
             }
             ((TextView) navigationDrawerHeader.findViewById(R.id.title)).setText(song.title);
             ((TextView) navigationDrawerHeader.findViewById(R.id.text)).setText(MusicUtil.getSongInfoString(song));
-            //boin removed drawerview
-            /*SongGlideRequest.Builder.from(Glide.with(this), song)
-                    .checkIgnoreMediaStore(this).build()
-                    .into(((ImageView) navigationDrawerHeader.findViewById(R.id.image)));*/
+
         } else {
             if (navigationDrawerHeader != null) {
                 navigationView.removeHeaderView(navigationDrawerHeader);
@@ -302,8 +299,8 @@ public class MainActivity extends AbsSlidingMusicPanelActivity implements Negati
         blurryBg.setAlpha(0.0f);
         blurryBg.setScaleX(1);
         blurryBg.setScaleY(1);
-        //boin testing error circumvention caused by outdated context
-        Glide.with(/*MainActivity.this*/getApplicationContext()).load(Util.getAlbumArtUri(MusicPlayerRemote.getCurrentSong().albumId))
+        //noteworthy: error circumvention caused by outdated context
+        Glide.with(getApplicationContext()).load(Util.getAlbumArtUri(MusicPlayerRemote.getCurrentSong().albumId))
                 .transform( new BlurTransformation.Builder(MainActivity.this).build())
                 .placeholder(R.drawable.default_blur)
                 .error(R.drawable.default_blur)

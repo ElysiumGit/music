@@ -141,7 +141,7 @@ public class LibraryFragment extends AbsMainActivityFragment implements CabHolde
     private void setUpToolbar() {
         int primaryColor = ThemeStore.primaryColor(getActivity());
 
-        //boin here we assign the color of the appbar and toolbar, in accordance with the active themes
+        //noteworthy: here we assign the color of the appbar and toolbar, in accordance with the active themes
         //automatically uses primary color when material themes are active and defaults to transparent when pro themes are activated. (transparent looks cleaner)
         mPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
         if(PreferenceUtil.getInstance(getActivity()).getGeneralTheme()==PreferenceUtil.getThemeResFromPrefValue("dark")){
@@ -160,10 +160,6 @@ public class LibraryFragment extends AbsMainActivityFragment implements CabHolde
             appbar.setBackgroundColor(Color.TRANSPARENT);
             toolbar.setBackgroundColor(Color.TRANSPARENT);
         }
-
-        //appbar.setBackgroundColor(primaryColor); //boin set appbar color
-        //toolbar.setBackgroundColor(primaryColor);
-        //toolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);  boin remove the navigation icon
         getActivity().setTitle(R.string.emptystring);
         getMainActivity().setSupportActionBar(toolbar);
     }

@@ -41,7 +41,7 @@ public class CategoryInfo implements Parcelable {
     };
 
     public enum Category {
-        //boin empty tabs icon
+        //noteworthy: empty tabs icon
         SONGS(R.string.emptystring),
         ALBUMS(R.string.emptystring),
         ARTISTS(R.string.emptystring),

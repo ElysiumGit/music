@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
@@ -55,6 +56,7 @@ import com.kabouzeid.trebl.util.PreferenceUtil;
 import com.kabouzeid.trebl.util.ViewUtil;
 import com.kabouzeid.trebl.views.BreadCrumbLayout;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
+import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -79,7 +81,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     private Unbinder unbinder;
 
     @BindView(R.id.coordinator_layout)
-    ConstraintLayout coordinatorLayout;
+    CoordinatorLayout coordinatorLayout;
     @BindView(R.id.container)
     View container;
     @BindView(android.R.id.empty)
@@ -222,6 +224,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         recyclerView.setAdapter(adapter);
         checkIsEmpty();
     }
+
 
     @Override
     public void onPause() {
